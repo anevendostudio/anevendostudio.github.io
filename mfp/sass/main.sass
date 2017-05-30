@@ -42,23 +42,32 @@ body
 	max-width: 100%
 	height: auto
 
-.main-head
+.s-menu
+	background-color: $accent
 	width: 100%
-	height: 900px
-	background-size: cover
+	height: auto
+	padding: 0
+	margin: 0
+	border: none
+
+
+.search
+	margin-top: 2px
 
 .top
-	width: 100%
-	height: 50px
+	top: 0px
 	margin: auto
 	padding: auto
-	background-color: $accent
-	
+	border: none
+	position: absolute
+	z-index: 21
+
 .mnu-line
 	padding: 0px 0px
 	
 .logo
-	padding-top: 10px
+	text-align: center
+	padding-top: 27px
 	color: $white
 	font-size: em(20px)
 	font-weight: bold
@@ -74,9 +83,8 @@ nav
 	li
 		display: inline-block
 
-
 .main-mnu
-	padding-top: 0px
+	padding-top: 18px
 	text-align: center
 	font-size: em(20px)
 	> ul
@@ -98,22 +106,97 @@ nav
 					color: $darkblue
 					text-decoration: none
 
-.main-content
-	background-color: $white
-	width: 1170px
-	height: auto
-	margin: auto 
-	padding: auto
+//Toggle Mnu
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 0px
 
-.top-banner
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+
+.hidden-mnu
+	display: none
+	position: relative
+	margin-top: 0px
+	background-color: $darkblue
+	li
+		display: block
+
+	> ul
+		padding-top: 0px
+		padding-bottom: 20px
+
+		> li
+			&.active
+				a
+					border-bottom: none
+					color: $white
+			> a
+				font-size: em(20px)
+				text-decoration: none
+				color: $white
+				&:hover
+					background-color: $white
+					color: $darkblue
+
+
+.content
 	width: 100%
-	height: 200px
+	background-size: contain
+	background-position: top center
+	background-repeat: no-repeat
 
-.left-side
+.center
+	width: 100%
+	height: 1000px
+	padding: 0
+	margin: 0
 	background-color: $white
-.left-menu
-	padding: 20px
-	background-color: $white
+	img
+		width: 100%
+		height: auto
+		margin-top: 85px
+
+.c-left
+	width: 100%
+	height: auto
+	margin: 0
+	padding: 0
+	margin-top: 20px
 	ul
 		list-style-type: none
 		margin: 0px
@@ -122,6 +205,7 @@ nav
 			color: #000
 			text-decoration: none
 			border-bottom: transparent
+			font-size: 15px
 			i
 				color: $accent
 		a:hover
@@ -129,55 +213,84 @@ nav
 			i
 				color: $red
 
+.c-right
+	width: 100%
+	height: 200px
+	margin: 0
+	padding: 0
+	margin-top: 20px
+
 .left-banner01
-	padding-top: 20px
 	width: 240px
 	height: 400px
-	margin-bottom: 20px
-	margin-left: 10px
+	margin: auto
+	padding: auto
+	margin-top: 20px
 
 .left-banner02
-	padding-top: 20px
 	width: 240px
 	height: 400px
-	margin-bottom: 20px
-	margin-left: 10px
+	margin: auto
+	padding: auto
+	margin-top: 20px
 
 .left-banner03
-	padding-top: 20px
 	width: 240px
 	height: 400px
-	margin-bottom: 20px
-	margin-left: 10px
+	margin: auto
+	padding: auto
+	margin-top: 20px
 
+.right-banner01
+	width: 240px
+	height: 400px
+	margin: auto
+	padding: auto
+	margin-top: 20px
 
-.cc-content
-	background-color: $white
+.right-banner02
+	width: 240px
+	height: 400px
+	margin: auto
+	padding: auto
+	margin-top: 20px
 
-.cc-item
-	margin-top: 25px
-	img
-		padding-bottom: 15px
-	a
-		font-size: em(11px)
-	p
-		padding-bottom: 20px
+.right-banner03
+	width: 240px
+	height: 400px
+	margin: auto
+	padding: auto
+	margin-top: 20px
 
 .cc-banner
-	width: 500px
-	height: 100px
-	margin-top: 1020px
-	background-color: $accent
-	margin-bottom: 50px
-	margin-left: 10px
+	width: 320px
+	height: 200px
+	margin: auto
+	padding: auto
+	margin-top: 10px
+	margin-bottom: 10px
 
-
-.news
-	padding-top: 20px
-	color: $white
+.cc-item
+	width: 100%
+	padding: 0
+	margin: 0
+	margin-top: 20px
 	margin-bottom: 20px
-	background-color: $white
-	
+	img
+		padding-bottom: 15px
+		margin: 0
+	a
+		font-size: 20px
+		color: $accent
+	a:hover
+		text-decoration: none
+		border-bottom: 1px dashed $red
+	p
+		padding-top: 5px
+		margin: 0px
+		i
+			color: $accent
+			font-size: 16px
 
 .news-header
 	height: 40px
@@ -185,58 +298,48 @@ nav
 	text-align: left
 	padding-top: 5px
 	padding-left: 15px
-
-.news-content
-	p
-		color: #000
-		font-size: em(16px)
-		padding: 0px
-	a
-		padding: 0px
-		margin: 0px
-		color: #000
+	color: $white
 
 .news-item
-	margin-top: 20px
-	margin-bottom: 20px
-
-.date
-	padding: 0px
-	margin: 0px
+	p
+		padding: 0
+		margin: 0
+		padding-top: 15px
+	a
+		font-size: 16px
+		color: $accent
+	a:hover
+		text-decoration: none
+		border-bottom: 1px dashed $red
 
 .news-bottom
 	background-color: $red
 	height: 40px
 	text-align: center
+	margin-top: 20px
 	padding-top: 5px
 	a
+		font-size: 16px
 		color: $white
 	a:hover
-		border-bottom: 1px dashed $white
 		text-decoration: none
+		border-bottom: 1px dashed $white
 
+.main-foot
+	margin-top: 20px
+	width: 100%
+	margin: auto
+	padding: auto
+	height: 85px
 
-.right-banner01
-	padding-top: 20px
-	width: 240px
-	height: 400px
-	margin-bottom: 20px
-	margin-left: 10px
-
-
-.right-banner02
-	padding-top: 20px
-	width: 240px
-	height: 400px
-	margin-bottom: 20px
-	margin-left: 10px
-
-.right-banner03
-	padding-top: 20px
-	width: 240px
-	height: 400px
-	margin-bottom: 20px
-	margin-left: 10px
+.copy
+	padding-top: 27px
+	a
+		font-size: 14px
+		color: $white
+	a:hover
+		text-decoration: none
+		border-bottom: 1px dashed $white
 
 
 
