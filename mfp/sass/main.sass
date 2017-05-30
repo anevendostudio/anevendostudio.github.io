@@ -50,7 +50,6 @@ body
 	margin: 0
 	border: none
 
-
 .search
 	margin-top: 2px
 
@@ -174,15 +173,19 @@ nav
 					color: $darkblue
 
 
+.main-head
+	width: 100%
+	height: 100vh
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
 .content
 	width: 100%
-	background-size: contain
-	background-position: top center
-	background-repeat: no-repeat
 
 .center
 	width: 100%
-	height: 1000px
+	height: 100vh
 	padding: 0
 	margin: 0
 	background-color: $white
@@ -197,6 +200,13 @@ nav
 	margin: 0
 	padding: 0
 	margin-top: 20px
+	
+.l-banner
+	img
+		margin-top: 20px
+	
+.l-menu
+	margin-bottom: 20px
 	ul
 		list-style-type: none
 		margin: 0px
@@ -215,61 +225,27 @@ nav
 
 .c-right
 	width: 100%
-	height: 200px
+	height: auto
 	margin: 0
 	padding: 0
 	margin-top: 20px
 
-.left-banner01
-	width: 240px
-	height: 400px
-	margin: auto
-	padding: auto
+.r-banner
+	margin: 0
+	padding: 0
 	margin-top: 20px
-
-.left-banner02
-	width: 240px
-	height: 400px
-	margin: auto
-	padding: auto
-	margin-top: 20px
-
-.left-banner03
-	width: 240px
-	height: 400px
-	margin: auto
-	padding: auto
-	margin-top: 20px
-
-.right-banner01
-	width: 240px
-	height: 400px
-	margin: auto
-	padding: auto
-	margin-top: 20px
-
-.right-banner02
-	width: 240px
-	height: 400px
-	margin: auto
-	padding: auto
-	margin-top: 20px
-
-.right-banner03
-	width: 240px
-	height: 400px
-	margin: auto
-	padding: auto
-	margin-top: 20px
+	margin-bottom: 0px
+	img
+		margin: 0
+		padding: 0
 
 .cc-banner
-	width: 320px
-	height: 200px
+	width: 100%
+	height: auto
 	margin: auto
 	padding: auto
-	margin-top: 10px
-	margin-bottom: 10px
-
+	margin-bottom: 20px
+	
 .cc-item
 	width: 100%
 	padding: 0
@@ -325,15 +301,9 @@ nav
 		text-decoration: none
 		border-bottom: 1px dashed $white
 
-.main-foot
-	margin-top: 20px
-	width: 100%
-	margin: auto
-	padding: auto
-	height: 85px
-
 .copy
 	padding-top: 27px
+	text-align: right
 	a
 		font-size: 14px
 		color: $white
@@ -341,10 +311,7 @@ nav
 		text-decoration: none
 		border-bottom: 1px dashed $white
 
-
-
-
-
-
+.menu-foot
+	height: 90px
 
 @import "media" // Всегда в конце
